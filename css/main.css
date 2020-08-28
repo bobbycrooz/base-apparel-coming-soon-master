@@ -1,0 +1,144 @@
+/*-=========================
+===========crooz============
+Style in /css/main.css
+Author: Idris Ifeoluwa
+style tools:
+-----------FlexBox,BEM,SASS
+==========crooz=============
+============================
+ */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_1: hsl(0, 36%, 70%);
+  --primary_2: hsl(0, 93%, 68%);
+  --neutral: hsl(0, 6%, 24%);
+  --L_Grad_1: 135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%);
+  --L_Grad_2: 135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%);
+  --josephin: "Josefin Sans", sans-serif;
+  --light: 300;
+  --lighter: 400;
+  --dark: 600;
+}
+
+body {
+  color: var(--primary_1);
+  font-family: var(--josephin);
+}
+
+.b {
+  border: 0.1px solid red;
+}
+
+.container {
+  margin: 0;
+  width: 500px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 40px;
+}
+
+.header__logo {
+  width: fit-content;
+}
+
+.header__image {
+  width: 100%;
+  max-height: 400px;
+}
+
+.section {
+  display: flex;
+  padding: 20px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  width: 380px;
+  padding: 10px;
+}
+
+.head--one {
+  font-size: 40px;
+  font-weight: var(--light);
+  letter-spacing: 8px;
+  color: var(--primary_1);
+}
+
+.head--two {
+  font-weight: var(--lighter);
+  color: var(--neutral);
+  font-size: 47px;
+  letter-spacing: 8px;
+}
+
+.content__blockquote {
+  margin-top: 30px;
+  font-weight: var(--lighter);
+  font-size: 16px;
+  word-spacing: 4spx;
+  line-height: 19px;
+}
+
+.content__input {
+  display: inline-flex;
+  margin-top: 40px;
+  width: 100%;
+}
+
+input[type=email] {
+  border: 1px solid var(--primary_1);
+  border-radius: 20px;
+  height: 40px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type=email]:hover {
+  border-color: var(--primary_2);
+}
+
+input[type=email]:focus {
+  outline: none;
+}
+
+input[type=email]::-webkit-input-placeholder {
+  color: var(--primary_1);
+  font-weight: var(--light);
+  font-family: var(--josephin);
+}
+
+.input__submit_btn {
+  color: var(--primary_1);
+  height: 40px;
+  width: 60px;
+  background-image: linear-gradient(var(--L_Grad_2));
+  border-radius: 20px;
+  border: none;
+  margin-left: -30px;
+}
+
+.input__submit_btn:focus {
+  outline: none;
+}
+
+.input__submit_btn:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 10px 0px var(--primary_1);
+}
+
+/*# sourceMappingURL=main.css.map */
