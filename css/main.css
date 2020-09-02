@@ -29,6 +29,9 @@ style tools:
 body {
   color: var(--primary_1);
   font-family: var(--josephin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .b {
@@ -36,13 +39,13 @@ body {
 }
 
 .container {
-  margin: 0;
-  width: 500px;
+ width:100%;
+
 }
 
 .main {
   display: flex;
-  flex-direction: column;
+flex-flow:column;
 }
 
 .header {
@@ -50,12 +53,14 @@ body {
 }
 
 .header__logo {
-  width: fit-content;
+ 
 }
 
 .header__image {
+  background-image: url('../images/hero-mobile.jpg');
+  background-size: cover;
   width: 100%;
-  max-height: 400px;
+  height: 300px;
 }
 
 .section {
@@ -141,4 +146,19 @@ input[type=email]::-webkit-input-placeholder {
   box-shadow: 3px 3px 10px 0px var(--primary_1);
 }
 
-/*# sourceMappingURL=main.css.map */
+
+@media screen and (min-width:500px){
+  .main{
+    flex-flow:row-reverse;
+  }
+
+  .header__image{
+    background-image: url('../images/hero-desktop.jpg');
+    align-self: flex-end;
+    height: 100vh;
+  }
+
+  .header{
+    width: 350px;
+  }
+}
