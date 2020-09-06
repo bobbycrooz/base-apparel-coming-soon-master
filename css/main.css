@@ -29,9 +29,6 @@ style tools:
 body {
   color: var(--primary_1);
   font-family: var(--josephin);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .b {
@@ -39,95 +36,87 @@ body {
 }
 
 .container {
- width:100%;
-
+  width: 100%;
 }
-
-.main {
+.container .main {
   display: flex;
-flex-flow:column;
+  flex-flow: column;
 }
-
-.header {
-  padding: 40px;
+.container .main .main__logo {
+  padding: 30px;
+  width: 50%;
 }
-
-.header__logo {
- 
-}
-
-.header__image {
-  background-image: url('../images/hero-mobile.jpg');
+.container .main .main__image {
+  background-image: url("../images/hero-mobile.jpg");
+  background-position: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
-
-.section {
-  display: flex;
-  padding: 20px;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
+.container .blockquote {
   text-align: center;
-  width: 380px;
-  padding: 10px;
+  width: 100%;
+  padding: 30px;
 }
-
-.head--one {
+.container .blockquote .blockquote__head {
+  padding: 10px;
+  height: auto;
+}
+.container .blockquote .blockquote__head .head--one {
   font-size: 40px;
   font-weight: var(--light);
   letter-spacing: 8px;
   color: var(--primary_1);
 }
-
-.head--two {
+.container .blockquote .blockquote__head .head--two {
   font-weight: var(--lighter);
   color: var(--neutral);
   font-size: 47px;
   letter-spacing: 8px;
 }
-
-.content__blockquote {
-  margin-top: 30px;
+.container .blockquote .blockquote__body {
   font-weight: var(--lighter);
   font-size: 16px;
-  word-spacing: 4spx;
+  word-spacing: 2px;
   line-height: 19px;
+  padding: 20px;
 }
-
-.content__input {
+.container .blockquote .blockquote__body .content__input {
   display: inline-flex;
   margin-top: 40px;
   width: 100%;
+  position: relative;
 }
-
-input[type=email] {
+.container .blockquote .blockquote__body .content__input::after {
+  content: "please provide a valid email";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  margin-left: 10px;
+}
+.container .blockquote .blockquote__body input[type=email] {
   border: 1px solid var(--primary_1);
   border-radius: 20px;
   height: 40px;
   padding: 10px;
   width: 100%;
 }
-
-input[type=email]:hover {
+.container .blockquote .blockquote__body input[type=email]:hover {
   border-color: var(--primary_2);
 }
-
-input[type=email]:focus {
+.container .blockquote .blockquote__body input[type=email]:focus {
   outline: none;
 }
-
-input[type=email]::-webkit-input-placeholder {
+.container .blockquote .blockquote__body input[type=email]::-webkit-input-placeholder {
   color: var(--primary_1);
   font-weight: var(--light);
   font-family: var(--josephin);
 }
-
-.input__submit_btn {
+.container .blockquote .blockquote__body #warning-icon {
+  margin: auto;
+  margin-left: -100px;
+}
+.container .blockquote .blockquote__body .input__submit_btn {
   color: var(--primary_1);
   height: 40px;
   width: 60px;
@@ -136,29 +125,18 @@ input[type=email]::-webkit-input-placeholder {
   border: none;
   margin-left: -30px;
 }
-
-.input__submit_btn:focus {
+.container .blockquote .blockquote__body .input__submit_btn:focus {
   outline: none;
 }
-
-.input__submit_btn:hover {
+.container .blockquote .blockquote__body .input__submit_btn:hover {
   cursor: pointer;
   box-shadow: 3px 3px 10px 0px var(--primary_1);
 }
-
-
-@media screen and (min-width:500px){
-  .main{
-    flex-flow:row-reverse;
-  }
-
-  .header__image{
-    background-image: url('../images/hero-desktop.jpg');
-    align-self: flex-end;
-    height: 100vh;
-  }
-
-  .header{
-    width: 350px;
+@media screen and (min-width: 600px) {
+  .container .main {
+    display: flex;
+    flex-direction: row;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
