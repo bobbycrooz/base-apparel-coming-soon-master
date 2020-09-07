@@ -35,12 +35,20 @@ body {
   border: 0.1px solid red;
 }
 
+.c {
+  border: 0.1px solid blue;
+}
+
 .container {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 .container .main {
   display: flex;
-  flex-flow: column;
+  justify-content: center;
+  margin-top: 0px;
+  width: 100%;
 }
 .container .main .main__logo {
   padding: 30px;
@@ -89,30 +97,33 @@ body {
 }
 .container .blockquote .blockquote__body .content__input::after {
   content: "please provide a valid email";
+  display: none;
   position: absolute;
   bottom: -25px;
   left: 0;
   margin-left: 10px;
+  font-size: 13px;
 }
-.container .blockquote .blockquote__body input[type=email] {
+.container .blockquote .blockquote__body input[type=text] {
   border: 1px solid var(--primary_1);
   border-radius: 20px;
   height: 40px;
   padding: 10px;
   width: 100%;
 }
-.container .blockquote .blockquote__body input[type=email]:hover {
+.container .blockquote .blockquote__body input[type=text]:hover {
   border-color: var(--primary_2);
 }
-.container .blockquote .blockquote__body input[type=email]:focus {
+.container .blockquote .blockquote__body input[type=text]:focus {
   outline: none;
 }
-.container .blockquote .blockquote__body input[type=email]::-webkit-input-placeholder {
+.container .blockquote .blockquote__body input[type=text]::-webkit-input-placeholder {
   color: var(--primary_1);
   font-weight: var(--light);
   font-family: var(--josephin);
 }
 .container .blockquote .blockquote__body #warning-icon {
+  display: none;
   margin: auto;
   margin-left: -100px;
 }
@@ -132,10 +143,38 @@ body {
   cursor: pointer;
   box-shadow: 3px 3px 10px 0px var(--primary_1);
 }
+.container .desktop-image {
+  background-image: url("../images/hero-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: none;
+}
+.container .show::after {
+  display: block;
+}
 @media screen and (min-width: 600px) {
-  .container .main {
+  .container .container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+  }
+  .container .main {
+    width: 50%;
+  }
+  .container .main__inner {
+    margin-top: 0px;
+    align-items: flex-start;
+  }
+  .container .main__image {
+    display: none;
+  }
+  .container .desktop-image {
+    display: block;
+    width: 50%;
+  }
+  .container .blockquote {
+    width: 400px;
+    text-align: left;
   }
 }
 

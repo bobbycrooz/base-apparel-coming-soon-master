@@ -20,45 +20,60 @@
   </style>
 </head>
 <body>
-    <div class="container b">
-        <div class="main">
-            <img src="images/logo.svg" alt="" class="main__logo">
+    <div class="container ">
+        <div class="main ">
+            <div class="main__inner ">
+                    <img src="images/logo.svg" alt="" class="main__logo ">
 
-            <div class="main__image ">
-                <!-- background  -->
+                    <div class="main__image">
+                        <!-- background  -->
+                    </div>
+
+                    <!-- ------ -->
+
+                    <div class="blockquote ">
+                        <div class="blockquote__head ">
+                            <p class="head--one">
+                                WE'ER
+                            <p>
+                    
+                            <p class="head--two">
+                                COMING 
+                                <br> 
+                                SOON
+                            </p>
+                        </div>
+                        <div class="blockquote__body ">
+                            <p>
+                                Hello fellow shoppers! We're currently building our new fashion store. 
+                                Add your email below to stay up-to-date with announcements and our launch deals.
+                            </p>
+            
+                            <!-- form input -->
+                                <form class="content__input">
+                                    <input type="text" name="email" id="email" class="content_email" placeholder="Email Adress">
+                                    <span id="warning-icon"><img id="wIcon" src="./images/icon-error.svg" alt=""></span>
+                                    <button  type="submit"  id="input__submit_btn" class="input__submit_btn"><span><img  src="images/icon-arrow.svg" alt="submit"></span></button>
+                                    <!-- <br>
+                                    <p id="warning-text">
+                                        please provide a valid name
+                                    </p> -->
+                                </form>
+
+                            
+      
+                </div>
+            
             </div>
         </div>
-        <div class="blockquote ">
-            <div class="blockquote__head ">
-                <p class="head--one">
-                    WE'ER
-                  <p>
+        </div>
+        <!-- -------- -->
+
+        <div class="desktop-image">
+            <!-- background image -->
+        </div>
         
-                  <p class="head--two">
-                      COMING 
-                      <br> 
-                      SOON
-                  </p>
-            </div>
-            <div class="blockquote__body ">
-                <p>
-                    Hello fellow shoppers! We're currently building our new fashion store. 
-                    Add your email below to stay up-to-date with announcements and our launch deals.
-                  </p>
-
-                   <!-- form input -->
-                    <form class="content__input ">
-                        <input type="email" name="email" id="email" class="content_email" placeholder="Email Adress">
-                        <span id="warning-icon"><img src="./images/icon-error.svg" alt=""></span>
-                        <button  type="submit" class="input__submit_btn"><span><img src="images/icon-arrow.svg" alt="submit"></span></button>
-                        <!-- <br>
-                        <p id="warning-text">
-                            please provide a valid name
-                        </p> -->
-                    </form>
-  
-            </div>
-        </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
