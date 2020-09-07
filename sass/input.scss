@@ -200,12 +200,16 @@ body{
         .desktop-image{
             display: block;
             width: 50%;
+           
         }
         .blockquote{
             width: 400px;
             text-align: left;
             margin-top: 30px;
 
+        }
+        .blockquote__body{
+            margin-left: -10px;
         }
         
     }

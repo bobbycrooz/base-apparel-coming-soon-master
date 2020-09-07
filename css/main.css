@@ -175,6 +175,9 @@ body {
     text-align: left;
     margin-top: 30px;
   }
+  .container .blockquote__body {
+    margin-left: -10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
