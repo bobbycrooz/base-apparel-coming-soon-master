@@ -113,8 +113,11 @@ body{
                    font-size: 13px;
                    
                 }
+                .show::after{
+                    display:block;
+                }
                 
-                input[type=text]{
+                input[type=email]{
                     border: 1px solid var(--primary_1);
                     border-radius: 20px;
                     height: 40px;
@@ -123,17 +126,12 @@ body{
                   
                 
                 }
-               
-               
-                
-                input[type=text]:hover{
-                    border-color: var(--primary_2);
-                }
-                input[type=text]:focus{
+        
+                input[type=email]:focus{
                     outline: none;
                 }
                 
-                input[type=text]::-webkit-input-placeholder{
+                input[type=email]::-webkit-input-placeholder{
                     color: var(--primary_1);
                     font-weight: var(--light);
                     font-family: var(--josephin);
@@ -174,9 +172,8 @@ body{
         height: 100vh;
         display: none;
     }
-    .show::after{
-        display:block;
-    }
+ 
+
 
    
     @media screen and (min-width:600px){

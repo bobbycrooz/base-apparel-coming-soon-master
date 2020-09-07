@@ -104,20 +104,20 @@ body {
   margin-left: 10px;
   font-size: 13px;
 }
-.container .blockquote .blockquote__body input[type=text] {
+.container .blockquote .blockquote__body .show::after {
+  display: block;
+}
+.container .blockquote .blockquote__body input[type=email] {
   border: 1px solid var(--primary_1);
   border-radius: 20px;
   height: 40px;
   padding: 10px;
   width: 100%;
 }
-.container .blockquote .blockquote__body input[type=text]:hover {
-  border-color: var(--primary_2);
-}
-.container .blockquote .blockquote__body input[type=text]:focus {
+.container .blockquote .blockquote__body input[type=email]:focus {
   outline: none;
 }
-.container .blockquote .blockquote__body input[type=text]::-webkit-input-placeholder {
+.container .blockquote .blockquote__body input[type=email]::-webkit-input-placeholder {
   color: var(--primary_1);
   font-weight: var(--light);
   font-family: var(--josephin);
@@ -148,9 +148,6 @@ body {
   background-size: cover;
   height: 100vh;
   display: none;
-}
-.container .show::after {
-  display: block;
 }
 @media screen and (min-width: 600px) {
   .container .container {

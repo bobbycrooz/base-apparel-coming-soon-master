@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="css/main.css">
 
   <style>
+       .dangerBorder{
+                    border-color: var(--primary_2);
+                }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -50,14 +53,11 @@
                             </p>
             
                             <!-- form input -->
-                                <form class="content__input">
-                                    <input type="text" name="email" id="email" class="content_email" placeholder="Email Adress">
-                                    <span id="warning-icon"><img id="wIcon" src="./images/icon-error.svg" alt=""></span>
-                                    <button  type="submit"  id="input__submit_btn" class="input__submit_btn"><span><img  src="images/icon-arrow.svg" alt="submit"></span></button>
-                                    <!-- <br>
-                                    <p id="warning-text">
-                                        please provide a valid name
-                                    </p> -->
+                                <form class="content__input" method="post">
+                                    <input type="email" name="email" id="email" class="content_email" placeholder="Email Adress">
+                                    <span id="warning-icon"><img  src="./images/icon-error.svg" alt=""></span>
+                                    <button  type="button"  id="submit-btn" class="input__submit_btn"><span><img  src="images/icon-arrow.svg" alt="submit"></span></button>
+                                    
                                 </form>
 
                             
